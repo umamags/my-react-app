@@ -2,24 +2,30 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  var data = [{
+    "when": "2 minutes ago", "who": "Jill Dupre is changed",
+    "description": "Created new account"
+  },
+  {
+    "when": "1 hour ago",
+    "who": "Lose White",
+    "description": "Added fist chapter"
+  }, {
+    "when": "2 hours ago",
+    "who": "Jordan Whash", "description": "Created new account"
+  }];
+  var rows = data.map(function (row) {
+    return <tr> <td>{row.when}</td> <td>{row.who}</td> <td>{row.description}</td>
+    </tr>
+  });
+  return <table>
+    <thead>
+      <th>When</th>
+      <th>Who</th>
+      <th>Description</th>
+    </thead>
+    {rows}
+  </table>
 }
 
 export default App;
