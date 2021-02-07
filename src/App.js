@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   var data = [{
-    "when": "2 minutes ago", "who": "Jill Dupre is changed",
+    "when": "2 minutes ago", "who": "Jill Dupre",
     "description": "Created new account"
   },
   {
